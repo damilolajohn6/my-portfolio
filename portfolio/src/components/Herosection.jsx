@@ -136,7 +136,8 @@ const Herosection = () => {
             I enjoy creating delightful, human-centered digital experiences
             which includes developing and maintaining high-quality software
             applications, collaborating with cross-functional teams, and
-            utilizing Agile methodologies for project management.<br></br>
+            utilizing Agile methodologies for project management.<br></br>I have experience with a variety of programming languages and frameworks such as Python, C++
+            JavaScript, Typscript, Django, Flask, React, Vue, Node.js, Next.js, e.t.c.
           </Desc>
           {/* <Button>Learn More</Button> */}
         </Left>
