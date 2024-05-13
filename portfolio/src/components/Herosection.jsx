@@ -126,8 +126,8 @@ const Herosection = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Esan Damilola John</Title>
-          <Subtitle>Fullstack Software Engineer</Subtitle>
+          <Title>Esan Damilola</Title>
+          <Desc>Software Engineer</Desc>
           <WhatWeDo>
             <Line src="./img/line.png" />
             <Subtitle>What I Do</Subtitle>

@@ -6,7 +6,7 @@ import Mac from "./Mac";
 
 const Desc = styled.div`
   width: 200px;
-  height: 70px;
+  height: 250px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -35,8 +35,11 @@ const WebDesign = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        I design products with a strong focus on both world class design and
-        ensuring your product is a market success.
+        My expertise in web development, database management, and software
+        testing ensures the delivery of reliable and error-free applications. My
+        dedication to staying updated with the latest industry trends and
+        technologies enables me to deliver exceptional solutions that drive
+        innovation and efficiency.
       </Desc>
     </>
   );

@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const Desc = styled.div`
   width: 200px;
-  height: 70px;
+  height: 250px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -33,8 +33,11 @@ const Development = () => {
         </Suspense>
       </Canvas>
       <Desc>
-        I design products with a strong focus on both world class design and
-        ensuring your product is a market success.
+        As a software engineer, I leverage various programming languages,
+        frameworks, and methodologies to develop innovative and efficient
+        solutions. I collaborate with cross-functional teams to gather
+        requirements, develop project specifications, and deliver high-quality
+        code within project timelines.
       </Desc>
     </>
   );

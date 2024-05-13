@@ -6,7 +6,7 @@ import WebDesign from "./WebDesign";
 
 const data = [
   "Web Design",
-  "Software Development",
+  "Development",
   "Product Design",
 
 ];
