@@ -5,12 +5,13 @@ import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
   return (
-    <section className="h-full">
+    <section className="h-full w-full flex items-center">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24 w-full">
+          {/* Left Section: Text */}
+          <div className="text-center xl:text-left order-2 xl:order-none flex-1">
             <span className="text-xl text-accent">Software Developer</span>
-            <h1 className="h1">
+            <h1 className="h1 mb-6">
               Hello I'm <br />
               <span className="text-accent">Damilola John</span>
             </h1>
@@ -27,7 +28,7 @@ const Home = () => {
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
-              <div className="mb-8 xl:mb-8">
+              <div className="mb-8 xl:mb-0">
                 <Socials
                   containerStyles="flex gap-6"
                   iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center
@@ -37,7 +38,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="">
+
+          {/* Right Section: Photo */}
+          <div className="order-1 xl:order-none flex-1 flex justify-end">
             <Photo />
           </div>
         </div>
@@ -45,5 +48,6 @@ const Home = () => {
     </section>
   );
 };
+
 
 export default Home;
