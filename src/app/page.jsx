@@ -9,7 +9,7 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24 w-full">
           {/* Left Section: Text */}
-          <div className="text-center xl:text-left order-2 xl:order-none flex-1">
+          <div className="text-center xl:text-left order-2 xl:order-none ">
             <span className="text-xl text-accent">Software Developer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />
