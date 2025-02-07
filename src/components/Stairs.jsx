@@ -1,4 +1,4 @@
-import { motion, animate } from "framer-motion";
+import { motion } from "framer-motion";
 
 const stairAnimation = {
   initial: {
@@ -24,7 +24,7 @@ const Stairs = () => {
         return (
             <motion.div
               key={index}
-              varians={stairAnimation}
+              variants={stairAnimation}
               initial="initial"
               animate="animate"
               exit="exit"

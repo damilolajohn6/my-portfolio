@@ -19,7 +19,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        primary: ["var(--font-jetbrainsMono)", "monospace"],
+        primary: "var(--font-jetbrains-mono)", // Match the variable exactly
       },
       colors: {
         primary: "#1c1c22",
