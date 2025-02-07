@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {BsArrowDownRight} from "react-icons/bs"
+import { BsArrowDownRight } from "react-icons/bs";
 
 const services = [
   {
@@ -28,14 +28,12 @@ const services = [
   },
   {
     num: "04",
-    title: "SEO",
+    title: "Graphics Design",
     description:
-      "Boost your online visibility with our expert SEO strategies. From keyword optimization to technical SEO and content strategy, I help you rank higher and attract the right audience.",
+      "Elevate your brand with stunning visuals that captivate your audience. From social media graphics to marketing materials, I bring creativity and precision to every design.",
     href: "",
   },
 ];
-
-
 
 const Services = () => {
   return (
@@ -49,22 +47,27 @@ const Services = () => {
           }}
           className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
         >
-          {services.map((service, index)=> {
+          {services.map((service, index) => {
             return (
               <div
                 key={index}
                 className="flex-1 flex flex-col justify-center gap-6 group"
               >
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold">
+                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
                     {service.num}
                   </div>
-                  <Link href={service.href}>
-                    <BsArrowDownRight />
+                  <Link
+                    href={service.href}
+                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                  >
+                    <BsArrowDownRight className="text-primary text-3xl" />
                   </Link>
                 </div>
-                <h2>{service.title}</h2>
-                <p>{service.description}</p>
+                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                  {service.title}
+                </h2>
+                <p className='text-white/60'>{service.description}</p>
                 <div className="border-b border-white/20 w-full"></div>
               </div>
             );
@@ -73,6 +76,6 @@ const Services = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Services
+export default Services;
