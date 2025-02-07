@@ -9,7 +9,7 @@ const Photo = () => {
       <motion.div>
         <div className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten">
           <Image
-            src='/assets.pics.png'
+            src='/assets/pics.png'
             priority
             quality={100}
             fill
