@@ -19,7 +19,21 @@ import {
   FaNodeJs,
   FaPython,
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiDjango, SiFlask } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiDjango,
+  SiFlask,
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+  SiPostgresql,
+  SiGit,
+  SiGithubactions,
+  SiAdobexd,
+  SiExpress,
+  SiMysql,
+  SiTypescript,
+} from "react-icons/si";
 
 const about = {
   title: "About Me",
@@ -146,46 +160,82 @@ const skills = {
   description:
     "I have a strong foundation in both frontend and backend technologies, allowing me to build seamless, high-performing, and scalable web applications. My expertise includes modern programming languages, frameworks, and design tools.",
   skillList: [
-    { icon: <FaHtml5 />, name: "HTML5 - Semantic and SEO-friendly markup." },
+    { icon: <FaHtml5 />, name: "HTML5" },
     {
       icon: <FaCss3 />,
-      name: "CSS3 - Modern styling with animations & transitions.",
+      name: "CSS3",
     },
     {
       icon: <FaJs />,
-      name: "JavaScript - ES6+ features and asynchronous programming.",
+      name: "JavaScript",
     },
     {
       icon: <FaPython />,
-      name: "Python - Backend scripting, automation, and AI integration.",
+      name: "Python",
     },
     {
       icon: <SiDjango />,
-      name: "Django - Scalable and secure backend development.",
+      name: "Django",
     },
     {
       icon: <SiFlask />,
-      name: "Flask - Lightweight and flexible API creation.",
+      name: "Flask",
     },
     {
       icon: <FaNodeJs />,
-      name: "Node.js - Server-side JavaScript with efficient performance.",
+      name: "Node.js",
+    },
+    {
+      icon: <SiExpress />,
+      name: "Express.js",
     },
     {
       icon: <SiNextdotjs />,
-      name: "Next.js - Optimized React framework for SEO and SSR.",
+      name: "Next.js",
     },
     {
-      icon: <SiTailwindcss />,
-      name: "Tailwind CSS - Utility-first approach to modern styling.",
+      icon: <SiTypescript />,
+      name: "TypeScript",
     },
     {
       icon: <FaReact />,
-      name: "React.js - Component-based architecture and state management.",
+      name: "React.js",
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: "Tailwind CSS",
     },
     {
       icon: <FaFigma />,
-      name: "Figma - UI/UX design, prototyping, and wireframing.",
+      name: "Figma",
+    },
+    {
+      icon: <SiAdobephotoshop />,
+      name: "Adobe Photoshop",
+    },
+    {
+      icon: <SiAdobeillustrator />,
+      name: "Adobe Illustrator",
+    },
+    {
+      icon: <SiAdobexd />,
+      name: "Adobe XD",
+    },
+    {
+      icon: <SiMysql />,
+      name: "MySQL",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "PostgreSQL",
+    },
+    {
+      icon: <SiGit />,
+      name: "Git",
+    },
+    {
+      icon: <SiGithubactions />,
+      name: "CI/CD",
     },
   ],
 };
@@ -251,7 +301,7 @@ const ResumePage = () => {
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experience.description}
+                  {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
@@ -281,11 +331,57 @@ const ResumePage = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
-            <TabsContent value="skills" className="w-full">
-              <p>Your skills details here...</p>
+            <TabsContent value="skills" className="w-full h-full">
+              <div className="flex flex-col gap-[30px]">
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {skills.description}
+                  </p>
+                </div>
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                  {skills.skillList.map((skill, index) => {
+                    return (
+                      <li key={index} className="">
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className="  text-6xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </TabsContent>
-            <TabsContent value="about" className="w-full">
-              <p>Your about me details here...</p>
+            <TabsContent value="about" className="w-full text-center xl:text-left">
+              <div className="">
+                <h3 className="">
+                  {about.title}
+                </h3>
+                <p className="">
+                  {about.description}
+                </p>
+                <ul className="">
+                  {about.info.map((item, index) => {
+                    return <li key={index} className="">
+                      <span className="">
+                        {item.fieldName}
+                      </span>
+                      <span className="">
+                        {item.fieldValue}
+                      </span>
+                    </li>
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
