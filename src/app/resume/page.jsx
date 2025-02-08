@@ -43,8 +43,8 @@ const about = {
     { fieldName: "Name", fieldValue: "Esan Damilola John" },
     { fieldName: "Phone", fieldValue: "+2348138701686" },
     { fieldName: "Experience", fieldValue: "5+ Years" },
-    { fieldName: "Nationality", fieldValue: "Nigerian" },
     { fieldName: "Email", fieldValue: "damilolajohn622@gmail.com" },
+    { fieldName: "Nationality", fieldValue: "Nigerian" },
     { fieldName: "Freelance", fieldValue: "Available" },
     { fieldName: "Language", fieldValue: "English" },
   ],
@@ -373,9 +373,9 @@ const ResumePage = () => {
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto  xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="">
-                        <span className="">{item.fieldName}</span>
-                        <span className="">{item.fieldValue}</span>
+                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-xl">{item.fieldValue}</span>
                       </li>
                     );
                   })}
