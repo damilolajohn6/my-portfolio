@@ -40,7 +40,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "Professional Experience",
   description:
-    "With a track record of working in diverse technical environments, I have gained hands-on experience in full-stack development, front-end engineering, and graphics/web design. I have successfully built and deployed scalable applications, optimized performance, and collaborated with teams to deliver user-friendly digital solutions.",
+    "With a track record of working in diverse technical environments, I have gained hands-on experience in full-stack development, and graphics/web design. I have successfully built and deployed scalable applications, optimized performance, and collaborated with teams to deliver user-friendly digital solutions.",
   items: [
     {
       company: "Qwik Technologies",
@@ -74,7 +74,7 @@ const experience = {
     },
     {
       company: "ApexKonnect Resources",
-      position: "Graphics Web Developer",
+      position: "Graphics Web Designer",
       duration: "2020 - 2023",
       responsibilities: [
         "Designed visually compelling web interfaces and branding materials.",
@@ -190,7 +190,6 @@ const skills = {
   ],
 };
 
-
 const ResumePage = () => {
   return (
     <motion.div
@@ -213,9 +212,40 @@ const ResumePage = () => {
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
 
-          <div className="w-full min-h-[70vh]">
+          <div className="w-full min-h-[90vh]">
             <TabsContent value="experience" className="w-full">
-              <p>Your experience details here...</p>
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {experience.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {experience.items.map((item, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#232329] h-auto p-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        >
+                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                            {item.company}
+                          </h3>
+                          <span className="text-accent">{item.duration}</span>
+
+                          <div className=" items-center gap-3">
+                            <h3 className="text-xl max-w-[260px] min-h-[60px] text-center text-white/80 lg:text-left">
+                              {item.position}
+                            </h3>
+                            <p className="text-white/60 mx-auto xl:mx-0">
+                              {item.responsibilities}
+                            </p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
             </TabsContent>
             <TabsContent value="education" className="w-full">
               <p>Your education details here...</p>
