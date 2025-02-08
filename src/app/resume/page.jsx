@@ -361,24 +361,23 @@ const ResumePage = () => {
                 </ul>
               </div>
             </TabsContent>
-            <TabsContent value="about" className="w-full text-center xl:text-left">
-              <div className="">
-                <h3 className="">
-                  {about.title}
-                </h3>
-                <p className="">
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className=" max-w-[600px] text-white/70 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="">
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto  xl:mx-0">
                   {about.info.map((item, index) => {
-                    return <li key={index} className="">
-                      <span className="">
-                        {item.fieldName}
-                      </span>
-                      <span className="">
-                        {item.fieldValue}
-                      </span>
-                    </li>
+                    return (
+                      <li key={index} className="">
+                        <span className="">{item.fieldName}</span>
+                        <span className="">{item.fieldValue}</span>
+                      </li>
+                    );
                   })}
                 </ul>
               </div>
