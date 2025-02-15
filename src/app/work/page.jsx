@@ -1,95 +1,98 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import "swiper/css";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { easeIn, motion } from 'framer-motion'
+import { useState } from 'react'
+import { BsArrowUpRight, BsGithub } from 'react-icons/bs'
+import 'swiper/css'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
-import Link from "next/link";
-import Image from "next/image";
+} from '@/components/ui/tooltip'
+import WorkSliderBtns from '@/components/WorkSliderBtns'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const projects = [
   {
-    num: "01",
-    category: "frontend",
-    title: "project 1",
+    num: '01',
+    category: 'frontend',
+    title: 'project 1',
     description:
-      "A modern and responsive static website built using HTML5, CSS3, and JavaScript. This project showcases interactive UI elements, smooth animations, and a mobile-friendly layout, making it an ideal example of clean and structured frontend development.",
+      'A modern and responsive static website built using HTML5, CSS3, and JavaScript. This project showcases interactive UI elements, smooth animations, and a mobile-friendly layout, making it an ideal example of clean and structured frontend development.',
     stack: [
       {
-        name: "Html 5",
+        name: 'Html 5',
       },
       {
-        name: "CSS 3",
+        name: 'CSS 3',
       },
       {
-        name: "Javascript",
+        name: 'Javascript',
       },
     ],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+    image: '/assets/work/thumb1.png',
+    live: '',
+    github: '',
   },
   {
-    num: "02",
-    category: "fullstack",
-    title: "project 2",
+    num: '02',
+    category: 'fullstack',
+    title: 'project 2',
     description:
-      "A full-stack web application developed using Next.js for the frontend, Tailwind CSS for styling, and Node.js for the backend. This project integrates dynamic content, server-side rendering, and API connections, ensuring fast performance and a seamless user experience.",
+      'A full-stack web application developed using Next.js for the frontend, Tailwind CSS for styling, and Node.js for the backend. This project integrates dynamic content, server-side rendering, and API connections, ensuring fast performance and a seamless user experience.',
     stack: [
       {
-        name: "Next.js",
+        name: 'Next.js',
       },
       {
-        name: "Tailwind.css",
+        name: 'Tailwind.css',
       },
       {
-        name: "Node.js",
+        name: 'Node.js',
       },
     ],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
+    image: '/assets/work/thumb2.png',
+    live: '',
+    github: '',
   },
   {
-    num: "03",
-    category: "frontend",
-    title: "project 3",
+    num: '03',
+    category: 'frontend',
+    title: 'project 3',
     description:
-      "A sleek, modern frontend project built with Next.js and styled using Tailwind CSS. This project demonstrates a minimalist UI with optimized performance, dynamic routing, and reusable components, making it scalable and maintainable.",
+      'A sleek, modern frontend project built with Next.js and styled using Tailwind CSS. This project demonstrates a minimalist UI with optimized performance, dynamic routing, and reusable components, making it scalable and maintainable.',
     stack: [
       {
-        name: "Next.js",
+        name: 'Next.js',
       },
       {
-        name: "Tailwind.css",
+        name: 'Tailwind.css',
       },
     ],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    github: "",
+    image: '/assets/work/thumb3.png',
+    live: '',
+    github: '',
   },
-];
+]
 
 const WorkPage = () => {
-  const [project, setProject] = useState(projects[0]);
+  const [project, setProject] = useState(projects[0])
   const handleSlideChange = (swiper) => {
-    const currentIndex = swiper.activeIndex;
-    setProject(projects[currentIndex]);
-  };
-
+    const currentIndex = swiper.activeIndex
+    setProject(projects[currentIndex])
+  }
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: easeIn },
+      }}
       exit={{ opacity: 0 }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
@@ -148,25 +151,40 @@ const WorkPage = () => {
             </div>
           </div>
           <div className="w-full xl:w-[50%]">
-            <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12"  onSlideChange={handleSlideChange}>
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              className="xl:h-[520px] mb-12"
+              onSlideChange={handleSlideChange}
+            >
               {projects.map((project, index) => {
-                return <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-
-                    <div className=""></div>
-                    <div className="relative w-full h-full">
-                      <Image src={project.image} fill className='object-cover' alt="" />
+                return (
+                  <SwiperSlide key={index} className="w-full">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                      <div className="absolute top-0 bottom-o w-full h-full bg-black/10 z-10"></div>
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={project.image}
+                          fill
+                          className="object-cover"
+                          alt=""
+                        />
+                      </div>
                     </div>
-
-                  </div>
-                </SwiperSlide>
+                  </SwiperSlide>
+                )
               })}
+
+              <WorkSliderBtns
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] transition-all flex justify-center items-center"
+              />
             </Swiper>
           </div>
         </div>
       </div>
     </motion.div>
   )
-};
+}
 
-export default WorkPage;
+export default WorkPage
