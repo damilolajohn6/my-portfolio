@@ -116,8 +116,8 @@ const WorkPage = () => {
                 <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 justify-center">
-                        <BsArrowUpRight />
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 justify-center items-center group">
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p className=""> live project</p>
