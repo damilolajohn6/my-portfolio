@@ -48,7 +48,7 @@ const ContactPage = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-10 xl:gap-16">
           {/* Contact Form */}
-          <div className="xl:w-2/3 w-full order-2 xl:order-none">
+          <div className="xl:w-[54%] w-full order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-6 md:p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-3xl md:text-4xl text-accent">
                 Let's work together
@@ -101,7 +101,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <p className="text-lg font-medium">{item.title}</p>
-                  <h3 className="text-white/60 text-sm md:text-base">
+                  <h3 className="text-white/60 text-xl md:text-base">
                     {item.value}
                   </h3>
                 </div>
