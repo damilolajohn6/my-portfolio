@@ -38,11 +38,11 @@ import {
 const about = {
   title: "About Me",
   description:
-    "I am a highly motivated and results-driven Software Engineer with over 5 years of experience in designing, developing, and maintaining high-performance web applications. My expertise spans across Web Development, UI/UX Design, Logo Design, and Graphics Design, where I create visually appealing and scalable solutions using modern technologies like Next.js, React, Node.js, TypeScript, Python (Django & Flask), and PostgreSQL/MongoDB. With a deep understanding of REST API development, Agile methodologies, software testing, and database management, I ensure seamless, efficient, and user-centric applications. Passionate about innovation and problem-solving, I thrive in fast-paced environments, collaborating with cross-functional teams to deliver cutting-edge digital solutions.",
+    "I am a highly motivated and results-driven Software Engineer with over 4 years of experience in designing, developing, and maintaining high-performance web applications. My expertise spans across Web Development, UI/UX Design, Logo Design, and Graphics Design, where I create visually appealing and scalable solutions using modern technologies like Next.js, React, Node.js, TypeScript, Python (Django & Flask), and PostgreSQL/MongoDB. With a deep understanding of REST API development, Agile methodologies, software testing, and database management, I ensure seamless, efficient, and user-centric applications. Passionate about innovation and problem-solving, I thrive in fast-paced environments, collaborating with cross-functional teams to deliver cutting-edge digital solutions.",
   info: [
     { fieldName: "Name", fieldValue: "Esan Damilola John" },
     { fieldName: "Phone", fieldValue: "+2348138701686" },
-    { fieldName: "Experience", fieldValue: "5+ Years" },
+    { fieldName: "Experience", fieldValue: "4+ Years" },
     { fieldName: "Email", fieldValue: "damilolajohn622@gmail.com" },
     { fieldName: "Nationality", fieldValue: "Nigerian" },
     { fieldName: "Freelance", fieldValue: "Available" },
@@ -59,7 +59,7 @@ const experience = {
     {
       company: "Qwik Technologies",
       position: "Full Stack Developer",
-      duration: "2025 - Present",
+      duration: "2024 - Present",
       responsibilities: [
         "Developing and maintaining full-stack applications with modern technologies.",
         "Building scalable backend services and optimizing frontend performance.",
