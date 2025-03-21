@@ -21,7 +21,7 @@ const Home = () => {
               proficient in various programming languages and technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="https://damilola-resume.tiiny.site">
+              <a href="https://damilola-resume.tiiny.site/Esan-Damilola.pdf" target="_blank" rel="noreferrer">
                 <Button
                   variant="outline"
                   size="lg"
