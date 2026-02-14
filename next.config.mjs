@@ -5,6 +5,10 @@ const nextConfig = {
     EMAIL_PASS: process.env.EMAIL_PASS,
     RECEIVER_EMAIL: process.env.RECEIVER_EMAIL,
   },
+  images: {
+  domains: ['images.unsplash.com'],
+},
+
 }
 
 export default nextConfig;
